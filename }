@@ -1,0 +1,56 @@
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Carousel1 from "@assets/Carousel1.webp"
+import Carousel2 from "@assets/Carousel2.webp"
+import Carousel3 from "@assets/Carousel3.webp"
+import Carousel4 from "@assets/Carousel4.webp"
+
+const Carousel = () => {
+
+    const data = [
+        {
+            img: Carousel1.src,
+            text: "Soy <span className='font-orange-500'>Mike Flores</span>, expresario, coordinador de la Bancada Naranja en Nuevo León, esposo y padre de dos niños que son mi motor. Mi compromiso es trabajar para que a Nuevo León siempre le vaya bien."
+        },
+         {
+            img: Carousel2.src,
+            text: "Me encanta pasar tiempo con mi familia, irme con ellos al rancho y salir a rodar en bicicleta."
+        },
+         {
+            img: Carousel3.src,
+            text: "Soy empresario transportista como mi padre y abuelo con varios años de trayectoria en el rubro."
+        },
+         {
+            img: Carousel4.src,
+            text: "Inicié como Jefe de la Oficina Ejecutiva del gobernador Samuel García y ahora soy Coordinador de la Bancada Naranja en Nuevo León."
+        },
+    ]
+    var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+    return (
+        <section className="p-6">
+            <Slider {...settings}>
+                {
+                    data.map((element, key) => (
+                        <div>
+                            <div className="grid grid-cols-6">
+                                <img className="col-span-2" src={element.img} alt=""/>
+                                <p className="col-span-4">  {element.text}</p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </Slider> 
+        </section>
+          
+    )
+}
+
+export default Carousel
