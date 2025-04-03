@@ -1,10 +1,19 @@
 ---
 import {Image} from "astro:assets"
-import HeroMike from "@assets/MikeHero.webp"
-import LogoHeroMF from "@assets/LogoMF.svg"
+import HeroMike from "@assets/HeroMF.webp"
+import HeroNoise from "@assets/HeroNoise.webp"
 ---
-<section class="relative">
-    <div class="relative bg-linear-to-r from-[#ef6f00] to-[#f07f00]">
-       <Image class="w-20 relative" src={HeroMike} alt="Mike Hero Section" /> 
+<section id="Hero" class="relative bg-linear-to-r from-[#ef6f00] to-[#f07f00]">
+    <div class="relative max-w-[1000px] mx-auto">
+       <Image class="w-full relative" src={HeroMike} alt="Mike Hero Section" /> 
     </div>
 </section>
+
+<style>
+section {
+    background-image: url("../assets/HeroNoise.webp");
+    background-origin: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
