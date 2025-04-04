@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets"
+import Facebook from "@assets/Facebook.svg"
+import Instagram from "@assets/Instagram.svg"
+import X from "@assets/X.svg"
+import Youtube from "@assets/Youtube.svg"
+import MCLogoOrange from "@assets/MCLogoOrange.svg"
+import MFLogoFooter from "@assets/MFLogoFooter.svg"
+
+const socials = [
+    {title: "Facebook", src: Facebook, href: "https://www.facebook.com/mikefloresse?locale=es_LA"},
+    {title: "Instagram", src: Instagram, href: "https://www.instagram.com/mikefloresse?igsh=cnJkaWRoaTc4bGp2"},
+    {title: "X", src: X, href: "https://x.com/mikefloresse"},
+    {title: "Youtube", src: Youtube, href: "https://youtube.com/@mikefloresse?si=bxjpAujQUAWNg4Cz"},
+]
+---
+<footer>
+    <div id="section-footer">
+        <Image src={MFLogoFooter} alt="Logo Mike Flores" />
+        <div>
+            <p>sigueme en mis redes:</p>
+            <ul class="flex">
+            {
+                socials.map(social => <li><a href={social.href} title={social.title}><Image src={social.src} alt={`Logo de ${social.title}`}/></a></li>)
+            }
+            </ul>
+        </div>
+    </div>
+    <div>
+        <Image src={MCLogoOrange} alt="" />       
+    </div>
+</footer>
+
+<style>
+    #section-footer {
+        background-image: url("../assets/HeroNoise.webp");
+        background-size: cover;
+    }
+</style>

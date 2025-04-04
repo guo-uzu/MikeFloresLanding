@@ -53,7 +53,7 @@ const Carousel = () => {
 
     return (
         <section className="w-full bg-orange-50 ">
-            <div className="max-w-[1600px] mx-auto relative px-20 py-10">
+            <div className="max-w-[1000px] mx-auto relative px-20 py-10">
             <Slider {...settings}>
                 {
                     data.map((element, key) => (
@@ -62,7 +62,7 @@ const Carousel = () => {
                             <div class="w-full max-h-[800px] overflow-hidden rounded-xl ">
                                 <img className="w-full relative" src={element.img} alt=""/>
                             </div>
-                                <p className="font-montserrat pr-10 text-3xl leading-relaxed max-[1024px]:text-xl max-[768px]:text-2xl max-[768px]:pr-0  ">{element.text}</p>
+                                <p className="font-montserrat pr-10 text-2xl leading-relaxed max-[1024px]:text-xl max-[768px]:text-2xl max-[768px]:pr-0  ">{element.text}</p>
                             </div>
                         </div>
                     ))

@@ -2,11 +2,15 @@
 import {Image} from "astro:assets"
 import HeroMike from "@assets/HeroMF.webp"
 import HeroNoise from "@assets/HeroNoise.webp"
+import LaserMFHero from "@assets/LaserMFHero.webp"
+import GradientMFHero from "@assets/GradientMFHero.webp"
 ---
 <section id="Hero" class="relative bg-linear-to-r from-[#ef6f00] to-[#f07f00]">
-    <div class="relative max-w-[1000px] mx-auto">
-       <Image class="w-full relative" src={HeroMike} alt="Mike Hero Section" /> 
+    <div class="max-w-[1000px] mx-auto">
+       <Image class="relative z-10 w-full" src={HeroMike} alt="Mike Hero Section" /> 
     </div>
+    <Image class="absolute bottom-0 z-0" src={LaserMFHero} alt="" />
+    <Image class="absolute bottom-0 z-10" src={GradientMFHero} alt="" />
 </section>
 
 <style>

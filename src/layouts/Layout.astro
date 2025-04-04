@@ -15,14 +15,14 @@ import "../styles/global.css"
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-	header {
-	    background-image: url("../assets/HeaderNoise.webp") !important;
+<style is:global>
+    * {
+      box-sizing: border-box;  
+     }
+	header, .noise-bg {
+	    background-image: url("../assets/HeaderNoise.webp");
+        background-origin: border-box;
+        background-size: cover;
+        background-repeat: round;
 	}
 </style>

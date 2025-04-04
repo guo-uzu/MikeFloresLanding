@@ -9,8 +9,8 @@ const Header = () => {
     ]
 
     return (
-    <header className="relative bg-linear-to-r from-[#ef6f00] to-[#f07f00] text-white uppercase font-montserrat font-semibold">
-       <nav className="flex relative z-10 items-center justify-between p-4 max-w-[1000px] mx-auto gap-6 max-[800px]:bg-linear-to-r max-[800px]:from-[#ef6f00] max-[800px]:to-[#f07f00]">
+    <header className="relative bg-linear-to-r noise-bg text-white uppercase font-montserrat font-semibold">
+       <nav className="flex relative z-30 items-center justify-between p-4 max-w-[1000px] mx-auto gap-6 ">
             <img className="w-[150px]" src={MikeFLogo.src} alt="Logo del Diputado Mike Flores" />
             <ul className="flex items-center gap-6 max-[800px]:hidden">
                 {
@@ -23,7 +23,7 @@ const Header = () => {
                } 
            </button>
        </nav> 
-      <ul className={`absolute z-0 w-full bg-linear-to-r transition-all duration-300 ease-in-out from-[#ef6f00] to-[#f07f00] border-t-1 border-white hidden items-center gap-4 max-[800px]:flex flex-col p-4 ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
+      <ul className={`absolute z-20 w-full noise-bg transition-all duration-300 ease-in-out border-t-1 border-white hidden items-center gap-4 max-[800px]:flex flex-col p-4 ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
             {
                 links.map((link, key) => <li key={key}><a onClick={() => setIsMenuOpen(!isMenuOpen)} href={link.href}>{link.title}</a></li>)
             }

@@ -1,8 +1,17 @@
 ---
+import { Image } from "astro:assets"
 import HeroSection from "./HeroSection.astro"
 import Carousel from "./Carousel.tsx"
+import Spot from "./Spot.astro"
+import CarouselTrabajo from "./CarouselTrabajo.tsx"
+import Todos from "@assets/Todos.webp"
+import Footer from "./Footer.astro"
 ---
 <main>
     <HeroSection />
     <Carousel client:only="react"/>
+    <Spot />
+    <CarouselTrabajo client:only="react"/>
+    <Image src={Todos} alt="" />
+    <Footer/>
 </main>
