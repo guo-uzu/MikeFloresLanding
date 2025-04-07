@@ -5,6 +5,8 @@ import Carousel from "./Carousel.tsx"
 import Spot from "./Spot.astro"
 import CarouselTrabajo from "./CarouselTrabajo.tsx"
 import Todos from "@assets/Todos.webp"
+import Columna from "./Columna.tsx"
+import Contacto from "./Contacto.tsx"
 import Footer from "./Footer.astro"
 ---
 <main>
@@ -13,5 +15,7 @@ import Footer from "./Footer.astro"
     <Spot />
     <CarouselTrabajo client:only="react"/>
     <Image src={Todos} alt="" />
+    <Columna client:only="react"/>
+    <Contacto client:only="react"/>
     <Footer/>
 </main>
