@@ -84,7 +84,8 @@ const CarouselTrabajo = () => {
   };
 
     return (
-        <section className="w-full bg-orange-50 ">
+        <section className="w-full bg-orange-50 p-10">
+            <h2 className="max-w-[560px] mx-auto text-center text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
             <div className="max-w-[1000px] mx-auto relative px-20 py-10">
             <Slider {...settings}>
                 {

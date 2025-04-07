@@ -14,8 +14,10 @@ import Footer from "./Footer.astro"
     <Carousel client:only="react"/>
     <Spot />
     <CarouselTrabajo client:only="react"/>
-    <Image src={Todos} alt="" />
+    <section class="w-full h-[800px] flex">
+        <Image class="w-0 grow object-cover" src={Todos} alt="" />
+    </section>
     <Columna client:only="react"/>
     <Contacto client:only="react"/>
-    <Footer/>
 </main>
+
