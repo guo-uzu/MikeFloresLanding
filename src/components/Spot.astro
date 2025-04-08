@@ -5,11 +5,11 @@ import Laser from "@assets/Laser.webp"
 ---
 <section class="relative overflow-hidden">
     <div class="max-w-[1000px] mx-auto py-20 px-6">
-        <div class="flex items-center">
+        <div class="flex items-center max-[900px]:flex-col relative">
             <div class="relative flex-2">
-                <div class="relative z-10 w-full rounded-l-lg  px-10 py-16 flex-2 flex flex-col items-center text-2xl text-center bg-orange-50 font-montserrat uppercase font-black text-orange-500">
+                <div class="relative z-10 w-full rounded-l-lg max-[900px]:rounded-lg px-10 py-16 flex-2 flex flex-col items-center text-2xl max-[900px]:text-md text-center bg-orange-50 font-montserrat uppercase font-black text-orange-500">
                     <Image class="w-full max-w-[100px] pb-6" src={MCLogoOrange} alt=""/> 
-                    <p><span class="text-orange-50 bg-orange-500 w-fit px-2">en la bancada nuevo león</span></p>
+                    <p class="text-orange-50 bg-orange-500 w-fit px-2">en la bancada nuevo león</p>
                     <p>estamos trabajando por</p>
                     <p>los temas que a ti más</p>
                     <p>te importan como</p>
@@ -19,8 +19,8 @@ import Laser from "@assets/Laser.webp"
                 <Image class="absolute top-0 -translate-y-[50%] z-0" src={Laser} alt="" />
                 <Image class="absolute bottom-0 translate-y-[50%] z-0" src={Laser} alt="" />
             </div>
-            <div class="flex items-center">
-                <iframe class="aspect-9/16 w-auto h-auto" src="https://www.youtube.com/embed/HmzQOUYAPhI" title="En la Bancada Nuevo León sí chambeamos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="flex items-center relative z-20 max-[900px]:-translate-y-10">
+                <iframe class="rounded-xl aspect-9/16 w-auto h-auto" src="https://www.youtube.com/embed/HmzQOUYAPhI" title="En la Bancada Nuevo León sí chambeamos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
