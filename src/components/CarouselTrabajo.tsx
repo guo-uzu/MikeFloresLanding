@@ -111,34 +111,36 @@ const CarouselTrabajo = () => {
   )
 
   return (
-    <section className="w-full bg-orange-50 p-10">
-      <h2 className="max-w-[560px] mx-auto text-center text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
-      <div className="max-w-[1000px] mx-auto relative px-10 py-10">
-        <div className='keen-slider' ref={sliderRef}>
-          {
-            data.map((element, key) => (
-              <div className="keen-slider__slide">
-                <div className="w-full h-full  bg-orange-500 rounded-xl font-montserrat  py-4 justify-center flex! gap-4 flex-col items-center">
-                  <p className="text-center text-orange-50 text-xl uppercase font-bold">{element.title}</p>
-                  <img className="w-full max-w-[150px]" src={element.img} alt="" />
-                  <p className="text-orange-50 text-center font-md">{element.text}</p>
+    <section className="w-full bg-orange-50 p-6 py-10 md:p-10">
+      <h2 className="max-w-[500px] md:max-w-full mx-auto pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
+      <div className="max-w-[1000px] mx-auto relative px-10">
+        <div className="relative">
+          <div className='keen-slider z-0 ' ref={sliderRef}>
+            {
+              data.map((element, key) => (
+                <div className="keen-slider__slide">
+                  <div className="w-full max-w-[400px] mx-auto h-full bg-orange-500 rounded-xl font-montserrat py-4 px-4 justify-center flex! gap-4 flex-col items-center">
+                    <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
+                    <img className="w-full max-w-[150px]" src={element.img} alt="" />
+                    <p className="text-orange-50 text-center font-md">{element.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))
-          }
+              ))
+            }
+          </div>
+          <button
+            onClick={() => instanceRef.current?.prev()}
+            className="absolute top-1/2 -left-[35px] transform -translate-y-1/2 z-10 cursor-pointer"
+          >
+            <img src={ArrowLeft.src} alt="Flecha izquierda" className="w-[30px]" />
+          </button>
+          <button
+            onClick={() => instanceRef.current?.next()}
+            className="absolute top-1/2 -right-[35px] transform -translate-y-1/2 z-10 cursor-pointer"
+          >
+            <img src={ArrowRight.src} alt="Flecha derecha" className="w-[30px]" />
+          </button>
         </div>
-        <button
-          onClick={() => instanceRef.current?.prev()}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer"
-        >
-          <img src={ArrowLeft.src} alt="Flecha izquierda" className="w-[30px]" />
-        </button>
-        <button
-          onClick={() => instanceRef.current?.next()}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer"
-        >
-          <img src={ArrowRight.src} alt="Flecha derecha" className="w-[30px]" />
-        </button>
 
       </div>
     </section>

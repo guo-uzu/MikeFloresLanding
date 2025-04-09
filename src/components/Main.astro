@@ -14,7 +14,7 @@ import Footer from "./Footer.astro"
     <Carousel client:only="react"/>
     <Spot />
     <CarouselTrabajo client:only="react"/>
-    <section class="w-full h-[800px] flex">
+    <section class="w-full h-full max-h-[800px] flex">
         <Image class="w-0 grow object-cover" src={Todos} alt="" />
     </section>
     <Columna client:only="react"/>
