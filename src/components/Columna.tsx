@@ -81,15 +81,15 @@ const Columna = () => {
         <h2 className="max-w-[500px] mx-auto text-center text-4xl font-montserrat text-orange-500 font-black uppercase">te invito a leer mi columna semanal</h2>
         <div className="relative flex gap-2 h-[500px] justify-center font-montserrat py-10">
           {getVisibleImages().map((element, i) => (
-            <a href={element.link} target="_blank">
-              <div key={i} className="flex relative opacity-70 hover:opacity-110 max-w-[200px] w-full h-full hover:max-w-[400px] transition-all">
+            <a key={i} href={element.link} target="_blank">
+              <div className="flex relative opacity-70 hover:opacity-100 max-[900px]:opacity-100 max-w-[200px]  w-full h-full hover:max-w-[400px] transition-all">
                 <img
-                  className="grow object-cover rounded-md"
+                  className="grow object-cover rounded-md max-[900px]:opacity-70"
                   src={element.src}
                   alt={`img-${i}`} />
                 <div class="absolute p-4 text-white">
-                  <p class="font-regular text-2xl">{element.title}</p>
-                  <p class="font-regular text-md px-2">({element.date})</p>
+                  <p class="font-regular text-2xl shadow-text">{element.title}</p>
+                  <p class="font-regular text-md shadow-text">({element.date})</p>
                 </div>
                 <div className="absolute bottom-0 w-full p-2  font-bold text-orange-500">
                   <p className="flex justify-between items-center bg-white w-full rounded-xl px-2 py-1">
@@ -101,19 +101,20 @@ const Columna = () => {
             </a>
 
           ))}
+          <img
+            src={ArrowLeft.src}
+            onClick={handlePrev}
+            className="absolute top-1/2 -left-[35px] transform w-[30px] h-auto cursor-pointer z-10"
+            alt="Flecha izquierda"
+          />
+          <img
+            src={ArrowRight.src}
+            onClick={handleNext}
+            className="absolute top-1/2 -right-[35px] transform w-[30px] h-auto cursor-pointer z-10"
+            alt="Flecha derecha"
+          />
+
         </div>
-        <img
-          src={ArrowLeft.src}
-          onClick={handlePrev}
-          className="absolute top-1/2 -left-[35px] transform w-[30px] h-auto cursor-pointer z-10"
-          alt="Flecha izquierda"
-        />
-        <img
-          src={ArrowRight.src}
-          onClick={handleNext}
-          className="absolute top-1/2 -right-[35px] transform w-[30px] h-auto cursor-pointer z-10"
-          alt="Flecha derecha"
-        />
       </div>
     </section>
   );

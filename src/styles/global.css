@@ -5,3 +5,6 @@
   --font-montserrat: "Montserrat", sans-serif; 
 }
 
+.shadow-text {
+  text-shadow: 2px 2px 2px black;
+}
