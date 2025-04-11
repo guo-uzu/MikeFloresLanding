@@ -15,6 +15,7 @@ import UnCongresoDeSoluciones from "@assets/UnCongresoDeSoluciones.webp";
 import NuevoPeriodoDeSesiones from "@assets/NuevoPeriodoDeSesiones.webp";
 import ArranqueTumultoso from "@assets/ArranqueTumultoso.webp";
 import EsPorNL from "@assets/EsPorNL.webp";
+import Coordinacion from "@assets/Coordinacion.webp";
 
 import ArrowLeft from "@assets/ArrowLeft.svg";
 import ArrowRight from "@assets/ArrowRight.svg";
@@ -24,7 +25,7 @@ const imagePool = [
   { src: AcabemosConElAbandonoDeMenores.src, title: "Acabemos con el abandono de menores", date: "04 abril 2025", link: "https://abcnoticias.mx/opinion/2025/4/4/acabemos-con-el-abandono-de-menores-245145.html" },
   { src: ElPresidenteDeLasNinez.src, title: "El presente de la niñez, el futuro de Nuevo León", date: "02 abril 2025", link: "https://www.elhorizonte.mx/opinion/el-presente-de-la-ninez-el-futuro-de-nuevo-leon/7536825636" },
   { src: TrumpAranceles.src, title: "Otra vez Trump, otra vez aranceles", date: "28 marzo 2025", link: "https://abcnoticias.mx/opinion/2025/3/28/otra-vez-trump-otra-vez-aranceles-244396.html" },
-  { src: DiaDeLaFamiliaNeolenesa.src, title: "Coordinación municipal, clave para Nuevo León", date: "26 marzo 2025", link: "https://www.elhorizonte.mx/opinion/coordinacion-municipal-clave-para-nuevo-leon/5379940264" },
+  { src: Coordinacion.src, title: "Coordinación municipal, clave para Nuevo León", date: "26 marzo 2025", link: "https://www.elhorizonte.mx/opinion/coordinacion-municipal-clave-para-nuevo-leon/5379940264" },
   { src: CuidemosAQuienesNosCuidan.src, title: "Cuidemos a quienes nos cuidan", date: "21 marzo 2025", link: "https://www.elhorizonte.mx/opinion/coordinacion-municipal-clave-para-nuevo-leon/5379940264" },
   { src: DiaDeLaFamiliaNeolenesa.src, title: "Día de la familia neoleonesa", date: "19 marzo 2025", link: "https://www.elhorizonte.mx/opinion/dia-de-la-familia-neoleonesa/4914321034" },
   { src: HeroeEnCadaBombero.src, title: "Nuevo León, un héroe en cada bombero te dio", date: "14 marzo 2025", link: "https://abcnoticias.mx/opinion/2025/3/14/nuevo-leon-un-heroe-en-cada-bombero-te-dio-243036.html" },
