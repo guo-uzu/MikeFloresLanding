@@ -34,12 +34,12 @@ const CarouselTrabajo = () => {
     {
       img: Cadenas.src,
       title: "penas más duras a secuestradores",
-      text: "Actualmente la pena a secuestradores es de 3 a 20 años. Yo propongo que sean hasta 80."
+      text: "Actualmente la pena a secuestradores es de 3 a 20 años. Yo propongo que sean de hasta 80."
     },
     {
       img: Escuela.src,
       title: "becas para hijos de fuerza civil",
-      text: "Para tener a la mejor policía de México, hay que apoyarlos con todo."
+      text: "Para tener a la mejor policía de México hay que apoyarlos con todo."
     },
     {
       img: Fuego.src,
@@ -49,7 +49,7 @@ const CarouselTrabajo = () => {
     {
       img: Telefono.src,
       title: "línea telefónica para prevenir el suicidio",
-      text: "Propuse crear una línea telefónica en los que alguien necesite ser escuchado."
+      text: "Propuse crear una línea telefónica para quien necesite ser escuchado."
     },
     {
       img: Nube.src,
@@ -58,13 +58,13 @@ const CarouselTrabajo = () => {
     },
     {
       img: Tribunal.src,
-      title: "más jovenes en la política",
+      title: "más jóvenes en la política",
       text: "Propuse bajar la edad para ocupar un cargo público y que así seamos más jóvenes haciendo nueva política."
     },
     {
       img: Pildoras.src,
       title: "guarderías y medicinas gratuitas",
-      text: "Para los hijos de padres o mares adolescentes y que así no abandonen sus sueños."
+      text: "Para los hijos de padres o madres adolescentes y que así no abandonen sus sueños."
     },
     {
       img: Mujer.src,

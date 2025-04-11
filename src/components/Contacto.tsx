@@ -104,7 +104,8 @@ const Contacto = () => {
             </div>
             <div className="flex flex-col gap-4">
               <label htmlFor="documentacion" className="mb-1">
-                Documentación Oficial (si aplica)
+                <p>Documentación Oficial (si aplica)</p>
+                <p className="text-xs font-bold">Máximo 15 MB</p>
               </label>
               <div className="relative w-fit">
                 <label

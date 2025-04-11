@@ -27,7 +27,7 @@ const Carousel = () => {
   const data = [
     {
       img: Carousel1.src,
-      text: <>Soy <span className='text-orange-500 font-black'>Mike Flores</span>, expresario, coordinador de la Bancada Naranja en Nuevo León, esposo y padre de dos niños que son mi motor. Mi compromiso es trabajar para que a Nuevo León siempre le vaya bien.</>
+      text: <>Soy <span className='text-orange-500 font-black'>Mike Flores</span>, empresario, Coordinador de la Bancada Naranja en Nuevo León, esposo y padre de dos niños que son mi motor. Mi compromiso es trabajar para que a Nuevo León siempre le vaya bien.</>
     },
     {
       img: Carousel2.src,
@@ -35,11 +35,11 @@ const Carousel = () => {
     },
     {
       img: Carousel3.src,
-      text: <>Soy empresario transportista como mi padre y abuelo con varios años de trayectoria en el rubro.</>
+      text: <>Soy empresario transportista como mi padre y abuelo, con varios años de trayectoria en el rubro.</>
     },
     {
       img: Carousel4.src,
-      text: <>Inicié como Jefe de la Oficina Ejecutiva del gobernador Samuel García y ahora soy Coordinador de la Bancada Naranja en Nuevo León.</>
+      text: <>Inicié como Jefe de la Oficina Ejecutiva del Gobernador Samuel García y ahora soy Coordinador de la Bancada Naranja en Nuevo León.</>
     },
   ]
   var settings = {
