@@ -25,8 +25,20 @@ const Contacto = () => {
             <p>con alguna gestión?</p>
             <p className="bg-orange-500 text-white w-fit py-3 px-9 rounded-2xl">¡escríbeme!</p>
             <p>estoy para ayudarte</p>
-            <button className="mt-20 max-[680px]:mt-6 bg-orange-500 text-white font-medium text-2xl px-16 py-2 rounded-2xl cursor-pointer" onClick={() => setShowH3(!showH3)}>
+            <button className="relative mt-20 max-[920px]:mt-10 max-[680px]:mt-6 bg-orange-500 text-white font-medium text-2xl max-[920px]:text-sm px-16 py-2 rounded-2xl cursor-pointer" onClick={() => setShowH3(!showH3)}>
               Quiero saber más
+              {
+                showH3 ?
+                  <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7" />
+                  </svg>
+                  :
+                  <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                  </svg>
+              }
+
+
             </button>
           </div>
         </div>
@@ -35,7 +47,7 @@ const Contacto = () => {
         className={`transition-all duration-700 ease-in-out overflow-hidden bg-orange-500 ${showH3 ? "max-h-full opacity-100" : "max-h-0 opacity-0"}`}
       >
         <div className="max-w-[1000px] mx-auto p-6 font-montserrat text-orange-50 flex flex-col gap-3 text-md">
-          <h2 className="uppercase text-center font-black text-2xl mx-14">¿necesitas ayuda con alguna gestión? ¡contáctame! estoy para servirte</h2>
+          <h2 className="uppercase text-center font-black text-2xl mx-14 max-[768px]:mx-0 max-[768px]:text-xl">¿necesitas ayuda con alguna gestión? ¡contáctame! estoy para servirte</h2>
           <p>Como diputado de Nuevo León he decidido donar el 100% de mi sueldo a causas que generen un impacto positivo en nuestro estado. Mi compromiso es apoyar iniciativas y personas que trabajen por el bienestar de Nuevo León. Busco apoyar a asociaciones civiles, colectivos, proyectos y personas que necesiten ayuda para desarrollar actividades en áreas como:</p>
           <ul className="list-disc list-inside">
             {

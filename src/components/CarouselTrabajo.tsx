@@ -122,7 +122,7 @@ const CarouselTrabajo = () => {
                   <div className="w-full max-w-[400px] mx-auto h-full bg-orange-500 rounded-xl font-montserrat py-4 px-4 justify-center flex! gap-4 flex-col items-center">
                     <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
                     <img className="w-full max-w-[150px]" src={element.img} alt="" />
-                    <p className="text-orange-50 text-center font-md">{element.text}</p>
+                    <p className="text-orange-50 text-center text-xs sm:text-sm md:text-md">{element.text}</p>
                   </div>
                 </div>
               ))
