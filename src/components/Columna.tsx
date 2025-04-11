@@ -76,7 +76,7 @@ const Columna = () => {
   }
 
   return (
-    <section className="px-10 py-10 bg-orange-50">
+    <section id="articulos" className="px-10 py-10 bg-orange-50">
       <div className="relative max-w-[1000px] mx-auto">
         <h2 className="max-w-[500px] mx-auto text-center text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-500 font-black uppercase">te invito a leer mi columna semanal</h2>
         <div className="relative flex gap-2 h-[500px] justify-center font-montserrat py-10">

@@ -17,7 +17,7 @@ const Contacto = () => {
   ]
   return (
     <>
-      <section className="relative bg-orange-50 max-[680px]:px-6">
+      <section id="contacto" className="relative bg-orange-50 max-[680px]:px-6">
         <div className="relative max-w-[1000px] mx-auto font-montserrat overflow-hidden max-[680px]:flex max-[680px]:flex-col-reverse">
           <img className="relative w-full max-w-[450px] max-[768px]:max-w-[350px] -bottom-8 -z-0 max-[680px]:mx-auto" src={MFContacto.src} />
           <div className="flex flex-col gap-1 items-center absolute max-[680px]:relative top-[100px] max-[680px]:top-0 uppercase font-black right-[100px] max-[680px]:right-0  max-[768px]:right-[50px] text-4xl max-[920px]:text-2xl text-center text-orange-500">

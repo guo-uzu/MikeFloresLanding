@@ -3,9 +3,9 @@ import MikeFLogo from "@assets/LogoMF.svg"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const links = [
-    { title: "Iniciativas", href: "#" },
-    { title: "Mis artículos de opinión", href: "#" },
-    { title: "Contacto", href: "#" },
+    { title: "Iniciativas", href: "#iniciativas" },
+    { title: "Mis artículos de opinión", href: "#articulos" },
+    { title: "Contacto", href: "#contacto" },
   ]
 
   return (
