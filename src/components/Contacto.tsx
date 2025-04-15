@@ -1,7 +1,9 @@
 import MFContacto from "@assets/MFContacto.webp"
 import { useForm } from "react-hook-form"
 import type SubmitHandler from "react-hook-form"
+import axios from "axios"
 import { useState } from "react"
+import Loader from "@assets/Loader.svg"
 
 type Inputs = {
     nombre: string,
@@ -19,16 +21,41 @@ type Inputs = {
 
 const Contacto = () => {
     const [showH3, setShowH3] = useState(false)
-
+    const [emailSended, setEmailSended] = useState(null)
+    const [sending, setSending] = useState(false)
+    const URL = "https://mikeflores.mx/sendEmail.php"
     const {
         register,
         handleSubmit,
         watch,
-        formState: { errors }
+        formState: { errors },
+        reset
     } = useForm<Inputs>()
     const file = watch("documentacion")?.[0]
-    const onSubmit: SubmitHandler<Inputs> = data => {
+    const onSubmit: SubmitHandler<Inputs> = async data => {
         data.documentacion = data.documentacion[0]
+        setSending(true)
+        const formData = new FormData()
+        formData.append("nombre", data.nombre)
+        formData.append('email', data.email);
+        formData.append('tel', data.tel);
+        formData.append('identificacion', data.identificacion);
+        formData.append('causa_nombre', data.causa_nombre);
+        formData.append('en_que_consiste', data.en_que_consiste);
+        formData.append('utilizacion', data.utilizacion);
+        formData.append('monto', data.monto);
+        formData.append('apoyo_externo', data.apoyo_externo);
+        formData.append('extra', data.extra);
+        formData.append('documentacion', data.documentacion);
+        const response = await axios.post(`${URL}`, formData, { headers: { "Content-Type": "multipart/form-data" } })
+        if (response.status === 200) {
+            setEmailSended(true)
+            setSending(false)
+            reset()
+        } else {
+            setEmailSended(false)
+            setSending(false)
+        }
     }
 
     const points = [
@@ -265,8 +292,22 @@ const Contacto = () => {
                             })} className="bg-orange-50 rounded-xs text-black p-1 w-full " rows="4" id="extra" name="extra"></textarea>
                             {errors.extra && <p className="text-xs mt-1">{errors.extra.message}</p>}
                         </div>
+                        {
+                            emailSended === true ?
+                                <p className="w-full bg-green-600 p-2 text-md rounded-sm">Datos enviados correctamente!</p>
+                                :
+                                emailSended === false ?
+                                    <p className="w-full bg-red-600 p-2 text-md rounded-sm">Error enviando los datos</p>
+                                    : ""
+                        }
                         <div className="flex justify-end">
-                            <button className="cursor-pointer bg-transparent border-2 rounded-xs text-xl px-9 py-2 hover:bg-orange-50 hover:text-orange-500 transition-colors" type="submit">Enviar</button>
+                            {
+                                !sending ?
+                                    <button className="cursor-pointer bg-transparent border-2 rounded-xs text-xl px-9 py-2 hover:bg-orange-50 hover:text-orange-500 transition-colors" type="submit">Enviar</button>
+                                    :
+
+                                    <button disabled className="border-2 rounded-xs text-xl px-9 py-2" type="submit">Enviando...</button>
+                            }
                         </div>
                     </form>
                 </div>
