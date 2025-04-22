@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Carousel1 from "@assets/CompletoCarousel1.webp"
-import Carousel2 from "@assets/Carousel2.webp"
+import Carousel2 from "@assets/CompletoCarousel2.webp"
 import Carousel3 from "@assets/Carousel3.webp"
 import Carousel4 from "@assets/Carousel4.webp"
 
@@ -45,8 +45,8 @@ const Carousel = () => {
                   <div className="relative">
                     <div className="w-full h-full relative">
                         <img src={Carousel1.src} alt="" />
-                      <div className="text-2xl text-white font-montserrat absolute -top-[12vh] translate-y-1/2 right-[28%] w-full max-w-[400px] text-right">
-                          <p className="text-image">soy</p>
+                      <div className="text-2xl text-white font-montserrat absolute -top-[5vh] translate-y-1/2 right-[28%] w-full max-w-[400px] text-right">
+                          <p className="text-[calc(1vw+1.3vh)]">soy</p>
                           <div className="uppercase text-[calc(4vw+1vh)] font-anton">
                             <p className="">mike</p>
                             <p className="">flores</p>
@@ -65,26 +65,17 @@ const Carousel = () => {
                   </div>
                    <div className="relative">
                     <div className="w-full h-full relative">
-                        <img src={Carousel1.src} alt="" />
-                      <div className="text-2xl text-white font-montserrat absolute -top-[12vh] translate-y-1/2 right-[28%] w-full max-w-[400px] text-right">
-                          <p className="text-image">soy</p>
-                          <div className="uppercase text-[calc(4vw+1vh)] font-anton">
-                            <p className="">mike</p>
-                            <p className="">flores</p>
+                        <img src={Carousel2.src} alt="" />
+                      <div className="flex flex-col items-end text-2xl text-white font-montserrat absolute top-[5vh] translate-y-1/2 right-[10%] w-full max-w-[600px] text-right">
+                          <p className="text-[calc(1vw+1.3vh)]">me encanta pasar tiempo con</p>
+                          <div className="uppercase text-[clamp(5rem,1vw+1vh,9rem)] font-anton">
+                            <p className="">mi familia</p>
                           </div>
-                            <p className="text-[calc(1vw+1.3vh)]">
-                                empresario, coordinador de la
-                                Bancada Naranja en Nuevo
-                                León, esposo y padre de dos
-                                niños que son mi motor. Mi
-                                compromiso es trabajar para
-                                que a Nuevo León siempre le
-                                vaya bien.
+                            <p className="text-[calc(1vw+1.3vh)] max-w-[400px]">
+                                irme con ellos al rancho y salir a rodar en bicicleta.
                             </p>
                         </div>
                     </div>
-                    
-
                   </div> 
                 </Slider>
             </div>

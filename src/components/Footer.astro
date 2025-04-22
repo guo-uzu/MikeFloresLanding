@@ -15,18 +15,19 @@ const socials = [
 ]
 ---
 <footer>
-  <div id="section-footer" class="relative flex items-center justify-between p-20 max-[758px]:p-10 max-[758px]:px-4">
+  <div id="" class="relative flex items-center justify-between p-20 max-[758px]:p-10 max-[758px]:px-4">
         <Image class="w-[250px] max-[758px]:w-[40%]" src={MFLogoFooter} alt="Logo Mike Flores" />
         <div class="flex flex-col items-end gap-2">
-            <p class="font-montserrat uppercase text-white font-bold text-sm max-[600px]:text-xs">sígueme en mis redes:</p>
+            <p class="font-montserrat uppercase text-orange-500 font-bold text-sm max-[600px]:text-xs">sígueme en mis redes:</p>
             <ul class="flex gap-6 max-[758px]:gap-4">
             {
-            socials.map(social => <li><a href={social.href} title={social.title} target="_blank"><Image class="w-8 max-[600px]:w-6 h-auto aspect-square" src={social.src} alt={`Logo de ${social.title}`}/></a></li>)
+              socials.map(social => <li><a href={social.href} title={social.title} target="_blank"><Image class="w-8 max-[600px]:w-6 h-auto aspect-square" src={social.src} alt={`Logo de ${social.title}`}/></a></li>)
             }
             </ul>
+            <a href="#" target="_blank"><p class="font-montserrat text-orange-500 text-md max-[600px]:text-xs">Aviso de privacidad</p></a>
         </div>
     </div>
-    <div class="flex items-center justify-center p-10">
+    <div id="section-footer" class="flex items-center justify-center p-10">
         <Image class="w-30" src={MCLogoOrange} alt="" />
     </div>
 </footer>

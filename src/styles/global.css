@@ -6,10 +6,3 @@
   --font-montserrat: "Montserrat", sans-serif; 
   --font-anton: "Anton", sans-serif; 
 }
-
-
-.text-image {
-  font-size: calc(2vw + 1vh);
-}
-
-

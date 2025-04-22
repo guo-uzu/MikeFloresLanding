@@ -87,23 +87,23 @@ const Contacto = () => {
 
     return (
         <>
-            <section id="contacto" className="relative bg-orange-50 max-[680px]:px-6">
-                <div className="relative max-w-[1000px] mx-auto font-montserrat overflow-hidden max-[680px]:flex max-[680px]:flex-col-reverse">
+            <section id="contacto" className="relative max-[680px]:px-6 section-footer">
+                <div className="relative max-w-[1000px] mx-auto font-anton overflow-hidden max-[680px]:flex max-[680px]:flex-col-reverse">
                     <img className="relative w-full max-w-[450px] max-[768px]:max-w-[350px] -bottom-8 -z-0 max-[680px]:mx-auto" src={MFContacto.src} />
-                    <div className="flex flex-col gap-1 items-center absolute max-[680px]:relative top-[100px] max-[680px]:top-0 uppercase font-black right-[100px] max-[680px]:right-0  max-[768px]:right-[50px] text-4xl max-[920px]:text-2xl text-center text-orange-500">
+                    <div className="flex flex-col gap-1 items-center absolute max-[680px]:relative top-[80px] max-[680px]:top-0 uppercase  right-[100px] max-[680px]:right-0  max-[768px]:right-[50px] text-5xl max-[920px]:text-4xl text-center text-white">
                         <p>¿necesitas ayuda</p>
                         <p>con alguna gestión?</p>
-                        <p className="bg-orange-500 text-white w-fit py-3 px-9 rounded-2xl">¡escríbeme!</p>
-                        <p>estoy para ayudarte</p>
-                        <button className="relative mt-20 max-[920px]:mt-10 max-[680px]:mt-6 bg-orange-500 text-white font-medium text-2xl max-[920px]:text-sm px-16 py-2 rounded-2xl cursor-pointer" onClick={() => setShowH3(!showH3)}>
+                        <p className="bg-white text-orange-500 w-full py-3 px-9 rounded-2xl my-6">¡escríbeme!</p>
+                        <p className="shadow-yellow">estoy para ayudarte</p>
+                        <button className="font-montserrat relative mt-20 max-[920px]:mt-10 max-[680px]:mt-6 bg-white text-orange-500 font-medium text-2xl max-[920px]:text-sm px-16 py-2 rounded-2xl cursor-pointer" onClick={() => setShowH3(!showH3)}>
                             Quiero saber más
                             {
                                 showH3 ?
-                                    <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-orange-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7" />
                                     </svg>
                                     :
-                                    <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="absolute top-1/2 -translate-1/2 right-0 w-6 h-6 text-orange-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
                                     </svg>
                             }
