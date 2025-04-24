@@ -5,4 +5,5 @@
 @theme {
   --font-montserrat: "Montserrat", sans-serif; 
   --font-anton: "Anton", sans-serif; 
+   --shadow-3xl: 0 0 10px oklch(90.5% 0.182 98.111);
 }

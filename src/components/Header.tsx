@@ -9,7 +9,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="relative bg-linear-to-r noise-bg text-white uppercase font-montserrat font-semibold">
+    <header className="relative bg-linear-to-r noise-bg text-white uppercase font-anton text-md">
       <nav className="flex relative z-30 items-center justify-between p-4 max-w-[1000px] mx-auto gap-6 ">
         <img className="w-[150px]" src={MikeFLogo.src} alt="Logo del Diputado Mike Flores" />
         <ul className="flex items-center gap-6 max-[800px]:hidden">

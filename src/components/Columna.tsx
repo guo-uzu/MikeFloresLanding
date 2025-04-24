@@ -19,7 +19,7 @@ import Coordinacion from "@assets/Coordinacion.webp";
 
 import ArrowLeft from "@assets/ArrowLeft.svg";
 import ArrowRight from "@assets/ArrowRight.svg";
-import ArrowOrange from "@assets/ArrowOrange.svg"
+import Arrow from "@assets/ArrowOrange.svg"
 
 const imagePool = [
   { src: AcabemosConElAbandonoDeMenores.src, title: "Acabemos con el abandono de menores", date: "04 abril 2025", link: "https://abcnoticias.mx/opinion/2025/4/4/acabemos-con-el-abandono-de-menores-245145.html" },
@@ -95,7 +95,7 @@ const Columna = () => {
                 <div className="absolute bottom-0 w-full p-2  font-bold text-orange-500">
                   <p className="flex justify-between items-center bg-white w-full rounded-xl px-2 py-1">
                     Leer más
-                    <img class="w-[15px] h-auto" src={ArrowOrange.src} alt="" />
+                    <img class="w-[15px] h-auto" src={Arrow.src} alt="" />
                   </p>
                 </div>
               </div>
@@ -103,18 +103,17 @@ const Columna = () => {
 
           ))}
           <img
-            src={ArrowLeft.src}
+            src={Arrow.src}
             onClick={handlePrev}
-            className="absolute top-1/2 -left-[35px] transform w-[30px] h-auto cursor-pointer z-10"
+            className="absolute top-1/2 -left-[35px] rotate-180 w-[30px] h-auto cursor-pointer z-10"
             alt="Flecha izquierda"
           />
           <img
-            src={ArrowRight.src}
+            src={Arrow.src}
             onClick={handleNext}
-            className="absolute top-1/2 -right-[35px] transform w-[30px] h-auto cursor-pointer z-10"
+            className="absolute top-1/2 -right-[35px] w-[30px] h-auto cursor-pointer z-10"
             alt="Flecha derecha"
           />
-
         </div>
       </div>
     </section>

@@ -1,6 +1,3 @@
-//import Slider from "react-slick"
-//import "slick-carousel/slick/slick.css";
-//import "slick-carousel/slick/slick-theme.css";
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 
@@ -13,20 +10,7 @@ import Tribunal from "@assets/Tribunal.svg"
 import Pildoras from "@assets/Pildoras.svg"
 import Mujer from "@assets/Mujer.svg"
 
-import ArrowLeft from "@assets/ArrowLeft.svg"
-import ArrowRight from "@assets/ArrowRight.svg"
-
-const ArrowL = ({ className, style, onClick }) => {
-  return (
-    <img className={className} style={{ ...style, left: "-40px", width: "30px", height: "auto" }} onClick={onClick} src={ArrowLeft.src} alt="Flecha a la derecha" />
-  )
-}
-
-const ArrowR = ({ className, style, onClick }) => {
-  return (
-    <img className={className} style={{ ...style, right: "-40px", width: "30px", height: "auto" }} onClick={onClick} src={ArrowRight.src} alt="Flecha a la izquierda" />
-  )
-}
+import Arrow from "@assets/ArrowOrange.svg"
 
 const CarouselTrabajo = () => {
 
@@ -74,17 +58,6 @@ const CarouselTrabajo = () => {
 
 
   ]
-  var settings = {
-    infinite: true,
-    dots: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    nextArrow: <ArrowR />,
-    prevArrow: <ArrowL />,
-    className: "carousel-job"
-  }
-
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -130,15 +103,15 @@ const CarouselTrabajo = () => {
           </div>
           <button
             onClick={() => instanceRef.current?.prev()}
-            className="absolute top-1/2 -left-[35px] transform -translate-y-1/2 z-10 cursor-pointer"
+            className="absolute top-1/2 -left-[35px] transform -translate-y-1/2 rotate-180 z-10 cursor-pointer"
           >
-            <img src={ArrowLeft.src} alt="Flecha izquierda" className="w-[30px]" />
+            <img src={Arrow.src} alt="Flecha izquierda" className="w-[30px]" />
           </button>
           <button
             onClick={() => instanceRef.current?.next()}
             className="absolute top-1/2 -right-[35px] transform -translate-y-1/2 z-10 cursor-pointer"
           >
-            <img src={ArrowRight.src} alt="Flecha derecha" className="w-[30px]" />
+            <img src={Arrow.src} alt="Flecha derecha" className="w-[30px]" />
           </button>
         </div>
 

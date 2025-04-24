@@ -2,10 +2,16 @@
 import {Image} from "astro:assets"
 import HeroMike from "@assets/HeroMF.webp"
 import HeroTextMike from "@assets/TextHeroMF.webp"
+import MobileTextHeroSection from "@assets/MobileTextHeroSection.svg"
+import HeroSectionMobile from "@assets/HeroSectionMobile.webp"
 ---
-<section id="Hero" class="flex relative max-h-[700px]">
-       <Image class=" w-0 grow object-cover" src={HeroMike} alt="Mike Hero Section" /> 
-      <Image class="absolute w-[38%] top-[18%] right-[8%]" src={HeroTextMike} alt="Mike Hero Section" /> 
+<section id="Hero" class="">
+  <div class="flex relative">
+    <Image class="max-[650px]:hidden w-0 grow object-cover" src={HeroMike} alt="Mike Hero Section" /> 
+    <Image class="max-[650px]:hidden absolute w-[38%] top-[18%] right-[8%]" src={HeroTextMike} alt="Mike Hero Section" /> 
+    <Image class="hidden max-[650px]:block" src={HeroSectionMobile} alt="Mike Hero Section Mobile"/>
+    <Image class="hidden max-[650px]:block absolute" src={MobileTextHeroSection} alt="Mike Hero Section Mobile"/>
+  </div>
 </section>
 
 <style>

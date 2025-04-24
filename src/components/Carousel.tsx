@@ -3,31 +3,65 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Carousel1 from "@assets/CompletoCarousel1.webp"
-import Carousel2 from "@assets/CompletoCarousel2.webp"
-import Carousel3 from "@assets/Carousel3.webp"
-import Carousel4 from "@assets/Carousel4.webp"
+import Carousel1Mobile from "@assets/Carousel1Mobile.webp"
+import TextCarousel1 from "@assets/CarouselText1.svg"
+import TextMobile1 from "@assets/TextCarouselMobile1.svg"
 
-import ArrowLeft from "@assets/ArrowLeft.svg"
-import ArrowRight from "@assets/ArrowRight.svg"
+import Carousel2 from "@assets/CompletoCarousel2.webp"
+import Carousel2Mobile from "@assets/Carousel2Mobile.webp"
+import TextCarousel2 from "@assets/CarouselText2.svg"
+import TextMobile2 from "@assets/TextCarouselMobile2.svg"
+
+import Carousel3 from "@assets/CompletoCarousel3.webp"
+import Carousel3Mobile from "@assets/Carousel3Mobile.webp"
+import TextCarousel3 from "@assets/CarouselText3.svg"
+import TextMobile3 from "@assets/TextCarouselMobile3.svg"
+
+import Carousel4 from "@assets/CompletoCarousel4.webp"
+import Carousel4Mobile from "@assets/Carousel4Mobile.webp"
+import TextCarousel4 from "@assets/CarouselText4.svg"
+import TextMobile4 from "@assets/TextCarouselMobile4.svg"
+
+import Arrow from "@assets/ArrowOrange.svg"
 
 const ArrowL = ({ className, style, onClick }) => {
     return (
-        <img className={className} style={{ ...style, zIndex: 9, left: "40px", width: "30px", height: "auto" }} onClick={onClick} src={ArrowLeft.src} alt="Flecha a la derecha" />
+        <img className={className} style={{ ...style, zIndex: 9, left: "40px", width: "30px", height: "auto", transform: "rotate(3.142rad) translate(0, 50%)" }} onClick={onClick} src={Arrow.src} alt="Flecha a la derecha" />
     )
 }
 
 const ArrowR = ({ className, style, onClick }) => {
     return (
-        <img className={className} style={{ ...style, right: "40px", width: "30px", height: "auto" }} onClick={onClick} src={ArrowRight.src} alt="Flecha a la izquierda" />
+        <img className={className} style={{ ...style, right: "40px", width: "30px", height: "auto" }} onClick={onClick} src={Arrow.src} alt="Flecha a la izquierda" />
     )
 }
 
 const Carousel = () => {
-
     const data = [
-        {
-            img: Carousel1.src,
-        }
+      {
+          img: Carousel1.src,
+          imgMobile: Carousel1Mobile.src,
+          text: TextCarousel1.src,
+          textMobile: TextMobile1.src
+      },
+      {
+          img: Carousel2.src,
+          imgMobile: Carousel2Mobile.src,
+          text: TextCarousel2.src,
+          textMobile: TextMobile2.src
+      },
+      {
+          img: Carousel3.src,
+          imgMobile: Carousel3Mobile.src,
+          text: TextCarousel3.src,
+          textMobile: TextMobile3.src
+      },
+      {
+          img: Carousel4.src,
+          imgMobile: Carousel4Mobile.src,
+          text: TextCarousel4.src,
+          textMobile: TextMobile4.src
+      },
     ]
     var settings = {
         infinite: true,
@@ -39,46 +73,19 @@ const Carousel = () => {
     };
 
     return (
-        <section className="w-full bg-orange-50 ">
-            <div className="">
-                <Slider {...settings}>
-                  <div className="relative">
-                    <div className="w-full h-full relative">
-                        <img src={Carousel1.src} alt="" />
-                      <div className="text-2xl text-white font-montserrat absolute -top-[5vh] translate-y-1/2 right-[28%] w-full max-w-[400px] text-right">
-                          <p className="text-[calc(1vw+1.3vh)]">soy</p>
-                          <div className="uppercase text-[calc(4vw+1vh)] font-anton">
-                            <p className="">mike</p>
-                            <p className="">flores</p>
-                          </div>
-                            <p className="text-[calc(1vw+1.3vh)]">
-                                empresario, coordinador de la
-                                Bancada Naranja en Nuevo
-                                León, esposo y padre de dos
-                                niños que son mi motor. Mi
-                                compromiso es trabajar para
-                                que a Nuevo León siempre le
-                                vaya bien.
-                            </p>
-                        </div>
-                    </div>
-                  </div>
-                   <div className="relative">
-                    <div className="w-full h-full relative">
-                        <img src={Carousel2.src} alt="" />
-                      <div className="flex flex-col items-end text-2xl text-white font-montserrat absolute top-[5vh] translate-y-1/2 right-[10%] w-full max-w-[600px] text-right">
-                          <p className="text-[calc(1vw+1.3vh)]">me encanta pasar tiempo con</p>
-                          <div className="uppercase text-[clamp(5rem,1vw+1vh,9rem)] font-anton">
-                            <p className="">mi familia</p>
-                          </div>
-                            <p className="text-[calc(1vw+1.3vh)] max-w-[400px]">
-                                irme con ellos al rancho y salir a rodar en bicicleta.
-                            </p>
-                        </div>
-                    </div>
-                  </div> 
-                </Slider>
-            </div>
+        <section className="w-full">
+          <Slider {...settings}>
+            {
+              data.map(element => (
+              <div className="flex! relative">
+                <img className="max-[650px]:hidden! w-full" src={element.img} alt="" />
+                <img className="max-[650px]:hidden! absolute top-0" src={element.text} alt="" />
+                <img className="hidden! max-[650px]:block! w-full" src={element.imgMobile} alt="" />
+                <img className="hidden! max-[650px]:block! w-full absolute top-0 z-10" src={element.textMobile} alt="" />
+              </div>
+              ))
+            }
+      </Slider>
         </section>
     )
 }
