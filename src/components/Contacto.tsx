@@ -4,7 +4,6 @@ import type SubmitHandler from "react-hook-form"
 import axios from "axios"
 import ReCAPTCHA from "react-google-recaptcha"
 import { useState } from "react"
-import Loader from "@assets/Loader.svg"
 
 type Inputs = {
     nombre: string,
@@ -87,7 +86,7 @@ const Contacto = () => {
 
     return (
         <>
-            <section id="contacto" className="relative max-[680px]:px-6 max-[680px]:pt-6 section-footer">
+            <section id="contacto" className="relative max-[680px]:px-6 max-[680px]:pt-6 section-footer scroll-mt-[77.19px]">
                 <div className="relative max-w-[1000px] mx-auto font-anton overflow-hidden max-[680px]:flex max-[680px]:flex-col-reverse">
                     <img className="relative w-full max-w-[450px] max-[768px]:max-w-[350px] pt-10 -z-0 max-[680px]:mx-auto" src={MFContacto.src} />
                     <div className="flex flex-col gap-1 items-center absolute max-[680px]:relative top-[60px] max-[680px]:top-0 uppercase  right-[100px] max-[680px]:right-0 max-[768px]:right-[50px] text-5xl max-[920px]:text-4xl text-center text-white">

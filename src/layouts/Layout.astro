@@ -1,22 +1,29 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
 ---
+
 <!doctype html>
 <html lang="en">
-    <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Mike Flores</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mike Flores</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
@@ -25,19 +32,20 @@ import "../styles/global.css"
   }
   * {
     box-sizing: border-box;
-    }
-	header, .noise-bg {
-	    background-image: url("../assets/HeaderNoise.webp");
-      background-origin: border-box;
-      background-size: cover;
-      background-repeat: round;
-	}
+  }
+  header,
+  .noise-bg {
+    background-image: url("../assets/HeaderNoise.webp");
+    background-origin: border-box;
+    background-size: cover;
+    background-repeat: round;
+  }
   .shadow-text {
     text-shadow: 2px 2px 2px black;
   }
   .section-footer {
-      background-image: url("../assets/HeroNoise.webp");
-      background-size: cover;
+    background-image: url("../assets/HeroNoise.webp");
+    background-size: cover;
   }
   .shadow-yellow {
     text-shadow: 0px 0px 5px yellow;
@@ -50,5 +58,15 @@ import "../styles/global.css"
   @font-face {
     font-family: "Anton";
     src: url("/fonts/Anton-Regular.ttf");
+  }
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+  }
+  .slick-slide > div {
+    height: 100%;
   }
 </style>

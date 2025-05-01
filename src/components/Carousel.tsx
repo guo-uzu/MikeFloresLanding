@@ -26,13 +26,13 @@ import Arrow from "@assets/ArrowOrange.svg"
 
 const ArrowL = ({ className, style, onClick }) => {
     return (
-        <img className={className} style={{ ...style, zIndex: 9, left: "40px", width: "30px", height: "auto", transform: "rotate(3.142rad) translate(0, 50%)" }} onClick={onClick} src={Arrow.src} alt="Flecha a la derecha" />
+        <img className={className} style={{ ...style, zIndex: 9, left: "10px", width: "20px", height: "auto", transform: "rotate(3.142rad) translate(0, 50%)" }} onClick={onClick} src={Arrow.src} alt="Flecha a la derecha" />
     )
 }
 
 const ArrowR = ({ className, style, onClick }) => {
     return (
-        <img className={className} style={{ ...style, right: "40px", width: "30px", height: "auto" }} onClick={onClick} src={Arrow.src} alt="Flecha a la izquierda" />
+        <img className={className} style={{ ...style, right: "10px", width: "20px", height: "auto" }} onClick={onClick} src={Arrow.src} alt="Flecha a la izquierda" />
     )
 }
 
@@ -63,6 +63,7 @@ const Carousel = () => {
           textMobile: TextMobile4.src
       },
     ]
+    
     var settings = {
         infinite: true,
         speed: 500,

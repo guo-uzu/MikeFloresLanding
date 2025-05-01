@@ -1,5 +1,6 @@
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react'
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Cadenas from "@assets/Cadenas.svg"
 import Escuela from "@assets/Escuela.svg"
@@ -11,6 +12,18 @@ import Pildoras from "@assets/Pildoras.svg"
 import Mujer from "@assets/Mujer.svg"
 
 import Arrow from "@assets/ArrowOrange.svg"
+
+const ArrowL = ({ className, style, onClick }) => {
+  return (
+    <img className={className} style={{ ...style, zIndex: 9, width: "20px", height: "auto", transform: "rotate(3.142rad) translate(0, 50%)" }} onClick={onClick} src={Arrow.src} alt="Flecha a la derecha" />
+  )
+}
+
+const ArrowR = ({ className, style, onClick }) => {
+  return (
+    <img className={className} style={{ ...style, width: "20px", height: "auto" }} onClick={onClick} src={Arrow.src} alt="Flecha a la izquierda" />
+  )
+}
 
 const CarouselTrabajo = () => {
 
@@ -58,63 +71,41 @@ const CarouselTrabajo = () => {
 
 
   ]
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      loop: true,
-      slides: {
-        perView: 2,
-        spacing: 100
-      },
-      breakpoints: {
-        "(max-width: 1024px)": {
-          slides: {
-            perView: 2,
-            spacing: 20
-          }
-        },
-        "(max-width: 900px)": {
-          slides: {
-            perView: 1,
-            spacing: 20
-          }
-        },
-
+  
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    dots: true,
+    adaptiveHeight: true,
+    slidesToScroll: 1,
+    nextArrow: <ArrowR />,
+    prevArrow: <ArrowL />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1
+        }
       }
-    },
-  )
+    ]
+  }
 
   return (
-    <section id='iniciativas' className="w-full bg-orange-50 p-6 py-10 md:p-10">
+    <section id='iniciativas' className="w-full bg-orange-50 p-6 py-12 md:p-20 scroll-mt-[77.19px]">
       <h2 className="max-w-[500px] md:max-w-full mx-auto pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
-      <div className="max-w-[1000px] mx-auto relative px-10">
-        <div className="relative">
-          <div className='keen-slider z-0 ' ref={sliderRef}>
-            {
-              data.map((element, key) => (
-                <div className="keen-slider__slide">
-                  <div className="w-full max-w-[400px] mx-auto h-full bg-orange-500 rounded-xl font-montserrat py-4 px-4 justify-center flex! gap-4 flex-col items-center">
-                    <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
-                    <img className="w-[150px] aspect-square " src={element.img} alt="" />
-                    <p className="text-orange-50 text-center text-xs sm:text-sm md:text-md">{element.text}</p>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-          <button
-            onClick={() => instanceRef.current?.prev()}
-            className="absolute top-1/2 -left-[35px] transform -translate-y-1/2 rotate-180 z-10 cursor-pointer"
-          >
-            <img src={Arrow.src} alt="Flecha izquierda" className="w-[30px]" />
-          </button>
-          <button
-            onClick={() => instanceRef.current?.next()}
-            className="absolute top-1/2 -right-[35px] transform -translate-y-1/2 z-10 cursor-pointer"
-          >
-            <img src={Arrow.src} alt="Flecha derecha" className="w-[30px]" />
-          </button>
-        </div>
-
+      <div className=" mx-auto relative max-w-[1000px]">
+        <Slider {...settings}>
+          {
+            data.map((element, key) => (
+              <div className="w-full max-w-[400px] h-full mx-auto bg-orange-500 rounded-xl font-montserrat p-6 justify-center flex! gap-4 flex-col items-center">
+                <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
+                <img className="w-[150px] aspect-square " src={element.img} alt="" />
+                <p className="text-orange-50 text-center text-xs sm:text-sm md:text-md">{element.text}</p>
+              </div>
+            ))
+          }
+        </Slider>
       </div>
     </section>
   )

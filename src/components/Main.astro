@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-import HeroSection from "./HeroSection.astro"
+import HeroSection from "./HeroSection.tsx"
 import Carousel from "./Carousel.tsx"
 import Spot from "./Spot.astro"
 import CarouselTrabajo from "./CarouselTrabajo.tsx"
@@ -8,16 +8,17 @@ import Todos from "@assets/Todos.webp"
 import TodosMobile from "@assets/TodosMobile.webp"
 import Columna from "./Columna.tsx"
 import Contacto from "./Contacto.tsx"
-import Footer from "./Footer.astro"
+import TextImage from "@assets/TextImage.svg"
 ---
 <main>
-    <HeroSection />
+    <HeroSection client:only="react" />
     <Carousel client:only="react"/>
     <Spot />
     <CarouselTrabajo client:only="react"/>
-    <section class="w-full h-full max-h-[800px] max-[650px]:max-h-full flex">
+    <section class="relative w-full h-full max-h-[800px] max-[650px]:max-h-full flex">
         <Image class="w-0 grow object-cover max-[650px]:hidden" src={Todos} alt="" />
         <Image class="hidden max-[650px]:block" src={TodosMobile} alt="" />
+        <Image class="hidden max-[650px]:block absolute bottom-0" src={TextImage} alt="" />
     </section>
     <Columna client:only="react"/>
     <Contacto client:only="react"/>
