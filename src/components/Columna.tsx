@@ -77,7 +77,7 @@ const Columna = () => {
     ],
   };
   return (
-    <section className="px-10 py-10 bg-orange-50">
+    <section id="articulos" className="px-10 py-10 bg-orange-50 scroll-mt-[77.19px]">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="max-w-[500px] mx-auto text-center text-2xl sm:text-3xl md:text-4xl font-anton text-orange-500 font-black uppercase">
           Te invito a leer mi columna semanal
@@ -90,7 +90,7 @@ const Columna = () => {
               <a href={item.link} target="_blank">
                 <div className="flex relative h-full">
                   <img
-                    className="w-full h-auto object-cover opacity-60 transform-gpu hover:scale-110 hover:opacity-100 transition-all duration-500"
+                    className="w-full h-auto object-cover opacity-60 transform-gpu hover:scale-110 max-[640px]:opacity-100 hover:opacity-100 transition-all duration-500"
                     src={item.src}
                     
                     alt={`img-${i}`}
