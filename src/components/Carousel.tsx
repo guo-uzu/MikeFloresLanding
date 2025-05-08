@@ -2,25 +2,21 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Carousel1 from "@assets/CompletoCarousel1.webp"
-import Carousel1Mobile from "@assets/Carousel1Mobile.webp"
+import Carousel1 from "@assets/WebCarousel1.webp"
+import Carousel1Mobile from "@assets/MobileCarousel1.webp"
 import TextCarousel1 from "@assets/CarouselText1.svg"
-import TextMobile1 from "@assets/TextCarouselMobile1.svg"
 
-import Carousel2 from "@assets/CompletoCarousel2.webp"
-import Carousel2Mobile from "@assets/Carousel2Mobile.webp"
+import Carousel2 from "@assets/WebCarousel2.webp"
+import Carousel2Mobile from "@assets/MobileCarousel2.webp"
 import TextCarousel2 from "@assets/CarouselText2.svg"
-import TextMobile2 from "@assets/TextCarouselMobile2.svg"
 
-import Carousel3 from "@assets/CompletoCarousel3.webp"
-import Carousel3Mobile from "@assets/Carousel3Mobile.webp"
+import Carousel3 from "@assets/WebCarousel3.webp"
+import Carousel3Mobile from "@assets/MobileCarousel3.webp"
 import TextCarousel3 from "@assets/CarouselText3.svg"
-import TextMobile3 from "@assets/TextCarouselMobile3.svg"
 
-import Carousel4 from "@assets/CompletoCarousel4.webp"
-import Carousel4Mobile from "@assets/Carousel4Mobile.webp"
+import Carousel4 from "@assets/WebCarousel4.webp"
+import Carousel4Mobile from "@assets/MobileCarousel4.webp"
 import TextCarousel4 from "@assets/CarouselText4.svg"
-import TextMobile4 from "@assets/TextCarouselMobile4.svg"
 
 import Arrow from "@assets/ArrowOrange.svg"
 
@@ -41,26 +37,18 @@ const Carousel = () => {
       {
           img: Carousel1.src,
           imgMobile: Carousel1Mobile.src,
-          text: TextCarousel1.src,
-          textMobile: TextMobile1.src
       },
       {
           img: Carousel2.src,
           imgMobile: Carousel2Mobile.src,
-          text: TextCarousel2.src,
-          textMobile: TextMobile2.src
       },
       {
           img: Carousel3.src,
           imgMobile: Carousel3Mobile.src,
-          text: TextCarousel3.src,
-          textMobile: TextMobile3.src
       },
       {
           img: Carousel4.src,
           imgMobile: Carousel4Mobile.src,
-          text: TextCarousel4.src,
-          textMobile: TextMobile4.src
       },
     ]
     
