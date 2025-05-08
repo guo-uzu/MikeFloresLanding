@@ -2,14 +2,25 @@ import { useState } from "react"
 import MikeFLogo from "@assets/LogoMF.svg"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScroll, setLastScroll] = useState(window.scrollY);
   const links = [
     { title: "Iniciativas", href: "#iniciativas" },
     { title: "Mis artículos de opinión", href: "#articulos" },
     { title: "Contacto", href: "#contacto" },
   ]
+  window.addEventListener("scroll", () => {
+      if (lastScroll >= window.scrollY) {
+          setIsVisible(true);
+      } else{
+          setIsVisible(false);
+      }
+      setLastScroll(window.scrollY)
+    })
+
 
   return (
-    <header className="relative bg-linear-to-r noise-bg text-white uppercase font-anton text-md sticky top-0 z-50">
+    <header className={`noise-bg text-white uppercase font-anton text-md sticky w-full transition-transform top-0 z-50 ${isVisible ? "translate-y-0" : "translate-y-[-100%]"}`}>
       <nav className="flex relative z-30 items-center justify-between p-4 max-w-[1000px] mx-auto gap-6">
         <img className="w-[150px]" src={MikeFLogo.src} alt="Logo del Diputado Mike Flores" />
         <ul className="flex items-center gap-6 max-[800px]:hidden">
