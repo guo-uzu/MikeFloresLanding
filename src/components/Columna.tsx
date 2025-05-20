@@ -92,7 +92,6 @@ const Columna = () => {
                   <img
                     className="w-full h-auto object-cover opacity-60 transform-gpu hover:scale-110 max-[640px]:opacity-100 hover:opacity-100 transition-all duration-500"
                     src={item.src}
-                    
                     alt={`img-${i}`}
                   />
                   <div className="absolute p-4 text-white">

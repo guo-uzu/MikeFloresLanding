@@ -8,6 +8,10 @@
    --shadow-3xl: 0 0 10px oklch(90.5% 0.182 98.111);
 }
 
+.menu {
+  
+}
+
 #Hero {
   background-image: url("../assets/HeroMF.webp");
   position: relative;

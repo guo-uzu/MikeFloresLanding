@@ -72,33 +72,16 @@ const CarouselTrabajo = () => {
 
   ]
   
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    dots: true,
-    adaptiveHeight: true,
-    slidesToScroll: 1,
-    nextArrow: <ArrowR />,
-    prevArrow: <ArrowL />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  }
+  
 
   return (
-    <section id='iniciativas' className="w-full bg-orange-50 p-10 py-12 md:p-20 scroll-mt-[77.19px]">
+    <section id='iniciativas' className="w-full bg-orange-50 px-10 py-20 pb-30 scroll-mt-[77.19px]">
       <h2 className="max-w-[500px] md:max-w-full mx-auto pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
-      <div className=" mx-auto relative max-w-[1000px]">
-        <Slider {...settings}>
+      <div className=" mx-auto relative max-w-[1440px]">
+        <Slider >
           {
             data.map((element, key) => (
-              <div className="w-full max-w-[400px] h-full mx-auto bg-orange-500 rounded-xl font-montserrat p-6 justify-center flex! gap-4 flex-col items-center">
+              <div className="w-full max-w-[400px] h-full mx-auto bg-orange-500 rounded-xl font-montserrat py-6 px-3 justify-center flex! gap-4 flex-col items-center">
                 <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
                 <img className="w-[150px] aspect-square " src={element.img} alt="" />
                 <p className="text-orange-50 text-center text-xs sm:text-sm md:text-md">{element.text}</p>
