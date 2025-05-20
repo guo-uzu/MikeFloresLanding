@@ -8,11 +8,7 @@
    --shadow-3xl: 0 0 10px oklch(90.5% 0.182 98.111);
 }
 
-.menu {
-  
-}
-
-#Hero {
+.Hero {
   background-image: url("../assets/HeroMF.webp");
   position: relative;
   height: 100%;
@@ -24,7 +20,7 @@
 }
 
 @media (max-width: 700px) {
-  #Hero {
+  .Hero {
     background-image: url("../assets/HeroSectionMobile.webp");
   }
 }
