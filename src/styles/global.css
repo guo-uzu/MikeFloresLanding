@@ -8,22 +8,20 @@
    --shadow-3xl: 0 0 10px oklch(90.5% 0.182 98.111);
 }
 
-#Hero {
+.hero-desktop {
   background-image: url("../assets/HeroMF.webp");
   position: relative;
   height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  -o-background-attachment: fixed;
-  -webkit-background-attachment: fixed;
-  -moz-background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (max-width: 700px) {
-  #Hero {
-    background-image: url("../assets/HeroSectionMobile.webp");
-  }
+.hero-mobile {
+  background-image: url("../assets/HeroSectionMobile.webp");
+  height: 100%;
+  background-size: cover;
 }
+
