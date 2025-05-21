@@ -4,19 +4,15 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Carousel1 from "@assets/WebCarousel1.webp"
 import Carousel1Mobile from "@assets/MobileCarousel1.webp"
-import TextCarousel1 from "@assets/CarouselText1.svg"
 
 import Carousel2 from "@assets/WebCarousel2.webp"
 import Carousel2Mobile from "@assets/MobileCarousel2.webp"
-import TextCarousel2 from "@assets/CarouselText2.svg"
 
 import Carousel3 from "@assets/WebCarousel3.webp"
 import Carousel3Mobile from "@assets/MobileCarousel3.webp"
-import TextCarousel3 from "@assets/CarouselText3.svg"
 
 import Carousel4 from "@assets/WebCarousel4.webp"
 import Carousel4Mobile from "@assets/MobileCarousel4.webp"
-import TextCarousel4 from "@assets/CarouselText4.svg"
 
 import Arrow from "@assets/ArrowOrange.svg"
 
@@ -68,9 +64,7 @@ const Carousel = () => {
           data.map(element => (
             <div className="flex! relative w-full">
               <img className="max-[650px]:hidden! w-full" src={element.img} alt="" />
-              <img className="max-[650px]:hidden! absolute top-0" src={element.text} alt="" />
               <img className="hidden! max-[650px]:block! w-full" src={element.imgMobile} alt="" />
-              <img className="hidden! max-[650px]:block! w-full absolute top-0 z-10" src={element.textMobile} alt="" />
             </div>
           ))
         }
