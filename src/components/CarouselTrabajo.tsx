@@ -68,20 +68,41 @@ const CarouselTrabajo = () => {
       title: "juzgados especializados en violencia contra las mujeres",
       text: "Para prevenir y sancionar cualquier tipo de violencia contra las mujeres y niñas."
     },
-
-
   ]
-  
-  
+
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <ArrowR />,
+    prevArrow: <ArrowL />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  }
+
 
   return (
-    <section id='iniciativas' className="w-full bg-orange-50 px-10 py-20 pb-30 scroll-mt-[77.19px]">
-      <h2 className="max-w-[500px] md:max-w-full mx-auto pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
-      <div className=" mx-auto relative max-w-[1440px]">
-        <Slider >
+    <section id='iniciativas' className="w-full bg-orange-50 px-10 py-40 scroll-mt-[77.19px]">
+      <h2 className="max-w-[500px] md:max-w-full mx-auto pb-10 text-center text-3xl md:text-5xl font-anton text-orange-500 font-black uppercase">conoce mi trabajo en beneficio de nuevo león</h2>
+      <div className="mx-auto relative max-w-[1440px] slider-container">
+        <Slider {...settings}>
           {
             data.map((element, key) => (
-              <div className="w-full max-w-[400px] h-full mx-auto bg-orange-500 rounded-xl font-montserrat py-6 px-3 justify-center flex! gap-4 flex-col items-center">
+              <div className="w-full max-w-[400px] h-full mx-auto bg-orange-500 rounded-xl font-montserrat p-10 justify-center flex! gap-4 flex-col items-center">
                 <p className="text-center text-orange-50 text-sm md:text-xl uppercase font-bold">{element.title}</p>
                 <img className="w-[150px] aspect-square " src={element.img} alt="" />
                 <p className="text-orange-50 text-center text-xs sm:text-sm md:text-md">{element.text}</p>
