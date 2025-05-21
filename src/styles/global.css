@@ -56,7 +56,6 @@ html {
   background-image: url("../assets/HeroMF.webp");
   position: relative;
   height: 100%;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -66,9 +65,11 @@ html {
 .hero-mobile {
   background-image: url("../assets/HeroSectionMobile.webp");
   height: 100%;
+  width: 100%;
   background-size: cover;
+  background-position: top;
 }
 
 .slick-dots {
-  bottom: -50px !important;
+  bottom: -100px !important;
 }
